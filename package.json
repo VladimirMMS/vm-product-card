@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/VladimirMMS",
   "engines": {
-    "node": ">=10"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "start": "tsdx watch",
