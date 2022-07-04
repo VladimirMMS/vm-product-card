@@ -7,6 +7,11 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "url": "https://github.com/VladimirMMS/vm-product-card",
+    "type": "git"
+  },
+  "homepage": "https://github.com/VladimirMMS",
   "engines": {
     "node": ">=10"
   },
@@ -14,6 +19,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -47,13 +53,20 @@
     }
   ],
   "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-image": "^2.1.1",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "babel-jest": "^28.1.2",
     "husky": "^8.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
@@ -61,6 +74,17 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "postcss": "^8.4.14"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "vladimir",
+    "mercado"
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   }
 }
